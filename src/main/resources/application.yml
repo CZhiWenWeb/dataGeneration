@@ -1,0 +1,24 @@
+#配置参考https://github.com/alibaba/druid/tree/master/druid-spring-boot-starter
+spring:
+  datasource:
+    druid:
+      #jdbc配置
+      url: jdbc:mysql://127.0.0.1:3306/transaction?characterEncoding=utf-8&serverTimezone=GMT%2B8
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+      #连接池配置
+      initial-size: 10  #初始化连接数
+      max-active: 20  #最大连接数
+      min-idle: 10  #最小连接数
+#      filters: stat #配置监控拦截器的filters
+#      filter:
+#        #sql监测
+#        stat:
+#          enabled: true
+#          #sql合并
+#          merge-sql: true
+#          slow-sql-millis: 0
+#        logback:
+#          #日志记录
+#          enabled: true
